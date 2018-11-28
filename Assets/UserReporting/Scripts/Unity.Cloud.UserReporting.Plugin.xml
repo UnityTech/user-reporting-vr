@@ -1,0 +1,331 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Unity.Cloud.UserReporting.Plugin</name>
+    </assembly>
+    <members>
+        <member name="T:Unity.Cloud.UserReporting.Plugin.UnityUserReporting">
+            <summary>
+            Provides a starting point for Unity Bug Reporting.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.Plugin.UnityUserReporting.CurrentClient">
+            <summary>
+            Gets the current client.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Plugin.UnityUserReporting.Configure(System.String,System.String,Unity.Cloud.UserReporting.Client.IUserReportingPlatform,Unity.Cloud.UserReporting.Client.UserReportingClientConfiguration)">
+            <summary>
+            Configures Unity Bug Reporting.
+            </summary>
+            <param name="endpoint">The endpoint.</param>
+            <param name="projectIdentifier">The project identifier.</param>
+            <param name="platform">The plaform.</param>
+            <param name="configuration">The configuration.</param>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Plugin.UnityUserReporting.Configure(System.String,System.String,Unity.Cloud.UserReporting.Client.UserReportingClientConfiguration)">
+            <summary>
+            Configures Unity Bug Reporting.
+            </summary>
+            <param name="endpoint"></param>
+            <param name="projectIdentifier"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Plugin.UnityUserReporting.Configure(System.String,Unity.Cloud.UserReporting.Client.UserReportingClientConfiguration)">
+            <summary>
+            Configures Unity Bug Reporting.
+            </summary>
+            <param name="projectIdentifier"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Plugin.UnityUserReporting.Configure(System.String)">
+            <summary>
+            Configures Unity Bug Reporting.
+            </summary>
+            <param name="projectIdentifier"></param>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Plugin.UnityUserReporting.Configure">
+            <summary>
+            Configures Unity Bug Reporting.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Plugin.UnityUserReporting.Configure(Unity.Cloud.UserReporting.Client.UserReportingClientConfiguration)">
+            <summary>
+            Configures Unity Bug Reporting.
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Plugin.UnityUserReporting.Configure(System.String,Unity.Cloud.UserReporting.Client.IUserReportingPlatform,Unity.Cloud.UserReporting.Client.UserReportingClientConfiguration)">
+            <summary>
+            Configures Unity Bug Reporting.
+            </summary>
+            <param name="projectIdentifier"></param>
+            <param name="platform"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Plugin.UnityUserReporting.Configure(Unity.Cloud.UserReporting.Client.IUserReportingPlatform,Unity.Cloud.UserReporting.Client.UserReportingClientConfiguration)">
+            <summary>
+            Configures Unity Bug Reporting.
+            </summary>
+            <param name="platform"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Plugin.UnityUserReporting.Configure(Unity.Cloud.UserReporting.Client.IUserReportingPlatform)">
+            <summary>
+            Configures Unity Bug Reporting.
+            </summary>
+            <param name="platform"></param>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Plugin.UnityUserReporting.GetPlatform">
+            <summary>
+            Gets the platform.
+            </summary>
+            <returns>The platform.</returns>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Plugin.UnityUserReporting.Use(Unity.Cloud.UserReporting.Client.UserReportingClient)">
+            <summary>
+            Uses an existing client.
+            </summary>
+            <param name="client">The client.</param>
+        </member>
+        <member name="T:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform">
+            <summary>
+            Represents the Unity bug reporting platform.
+            </summary>
+        </member>
+        <member name="T:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.LogMessage">
+            <summary>
+            Represents a log message.
+            </summary>
+        </member>
+        <member name="F:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.LogMessage.LogString">
+            <summary>
+            Gets or sets the log string.
+            </summary>
+        </member>
+        <member name="F:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.LogMessage.LogType">
+            <summary>
+            Gets or sets the log type.
+            </summary>
+        </member>
+        <member name="F:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.LogMessage.StackTrace">
+            <summary>
+            Gets or sets the stack trace.
+            </summary>
+        </member>
+        <member name="T:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.PostOperation">
+            <summary>
+            Represents a post operation.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.PostOperation.Callback">
+            <summary>
+            Gets or sets the callback.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.PostOperation.ProgressCallback">
+            <summary>
+            Gets or sets the progress callback.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.PostOperation.WWW">
+            <summary>
+            Gets or sets the WWW client.
+            </summary>
+        </member>
+        <member name="T:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.ProfilerSampler">
+            <summary>
+            Represents a profiler sampler.
+            </summary>
+        </member>
+        <member name="F:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.ProfilerSampler.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="F:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.ProfilerSampler.Recorder">
+            <summary>
+            Gets or sets the recorder.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.ProfilerSampler.GetValue">
+            <summary>
+            Gets the value of the sampler.
+            </summary>
+            <returns>The value of the sampler.</returns>
+        </member>
+        <member name="T:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.ScreenshotOperation">
+            <summary>
+            Represents a screenshot operation.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.ScreenshotOperation.Callback">
+            <summary>
+            Gets or sets the callback.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.ScreenshotOperation.FrameNumber">
+            <summary>
+            Gets or sets the frame number.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.ScreenshotOperation.MaximumHeight">
+            <summary>
+            Gets or sets the maximum height.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.ScreenshotOperation.MaximumWidth">
+            <summary>
+            Gets or sets the maximum width.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.ScreenshotOperation.PngData">
+            <summary>
+            Gets or sets the PNG data.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.ScreenshotOperation.Source">
+            <summary>
+            Gets or sets the source.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.ScreenshotOperation.Stage">
+            <summary>
+            Gets or sets the stage.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.ScreenshotOperation.Texture">
+            <summary>
+            Gets or sets the texture.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.ScreenshotOperation.TextureResized">
+            <summary>
+            Gets or sets the texture (resized).
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.ScreenshotOperation.UnityFrame">
+            <summary>
+            Gets or sets the Unity frame.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.ScreenshotOperation.WaitFrames">
+            <summary>
+            Gets or sets the wait frames.
+            </summary>
+        </member>
+        <member name="T:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.ScreenshotStage">
+            <summary>
+            Represents a screenshot stage.
+            </summary>
+        </member>
+        <member name="F:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.ScreenshotStage.Render">
+            <summary>
+            Render.
+            </summary>
+        </member>
+        <member name="F:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.ScreenshotStage.ReadPixels">
+            <summary>
+            Read pixels.
+            </summary>
+        </member>
+        <member name="F:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.ScreenshotStage.GetPixels">
+            <summary>
+            Gets pixels.
+            </summary>
+        </member>
+        <member name="F:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.ScreenshotStage.EncodeToPNG">
+            <summary>
+            Encode to PNG.
+            </summary>
+        </member>
+        <member name="F:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.ScreenshotStage.Done">
+            <summary>
+            Done.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.#ctor">
+            <summary>
+            Creates a new instance of the <see cref="T:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform"/> class.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.DeserializeJson``1(System.String)">
+            <inheritdoc cref="T:Unity.Cloud.UserReporting.Client.IUserReportingPlatform"/>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.OnEndOfFrame(Unity.Cloud.UserReporting.Client.UserReportingClient)">
+            <inheritdoc cref="T:Unity.Cloud.UserReporting.Client.IUserReportingPlatform"/>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.Post(System.String,System.String,System.Byte[],System.Action{System.Single,System.Single},System.Action{System.Boolean,System.Byte[]})">
+            <inheritdoc cref="T:Unity.Cloud.UserReporting.Client.IUserReportingPlatform"/>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.SendAnalyticsEvent(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <inheritdoc cref="T:Unity.Cloud.UserReporting.Client.IUserReportingPlatform"/>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.SerializeJson(System.Object)">
+            <inheritdoc cref="T:Unity.Cloud.UserReporting.Client.IUserReportingPlatform"/>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.TakeScreenshot(System.Int32,System.Int32,System.Int32,System.Object,System.Action{System.Int32,System.Byte[]})">
+            <inheritdoc cref="T:Unity.Cloud.UserReporting.Client.IUserReportingPlatform"/>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.Update(Unity.Cloud.UserReporting.Client.UserReportingClient)">
+            <inheritdoc cref="T:Unity.Cloud.UserReporting.Client.IUserReportingPlatform"/>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.GetDeviceMetadata">
+            <inheritdoc cref="T:Unity.Cloud.UserReporting.Client.IUserReportingPlatform"/>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.ModifyUserReport(Unity.Cloud.UserReporting.UserReport)">
+            <inheritdoc cref="T:Unity.Cloud.UserReporting.Client.IUserReportingPlatform"/>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Plugin.UnityUserReportingPlatform.SampleAutomaticMetrics(Unity.Cloud.UserReporting.Client.UserReportingClient)">
+            <summary>
+            Samples automatic metrics.
+            </summary>
+            <param name="client">The client.</param>
+        </member>
+        <member name="T:Unity.Cloud.UserReporting.Plugin.UnityUserReportingUpdater">
+            <summary>
+            Helps with updating the Unity Bug Reporting client.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Plugin.UnityUserReportingUpdater.#ctor">
+            <summary>
+            Creates a new instance of the <see cref="T:Unity.Cloud.UserReporting.Plugin.UnityUserReportingUpdater"/> class.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.Plugin.UnityUserReportingUpdater.Current">
+            <summary>
+            Gets the current item.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Plugin.UnityUserReportingUpdater.MoveNext">
+            <summary>
+            Moves to the next item.
+            </summary>
+            <returns>A value indicating whether the move was successful.</returns>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Plugin.UnityUserReportingUpdater.Reset">
+            <summary>
+            Resets the updater.
+            </summary>
+        </member>
+        <member name="T:Unity.Cloud.UserReporting.Plugin.UnityUserReportParser">
+            <summary>
+            Provides static methods for parsing bug reports.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Plugin.UnityUserReportParser.ParseUserReport(System.String)">
+            <summary>
+            Parses a bug report.
+            </summary>
+            <param name="json">The JSON.</param>
+            <returns>The bug report.</returns>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Plugin.UnityUserReportParser.ParseUserReportList(System.String)">
+            <summary>
+            Parses a bug report list.
+            </summary>
+            <param name="json">The JSON.</param>
+            <returns>The bug report list.</returns>
+        </member>
+    </members>
+</doc>

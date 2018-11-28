@@ -1,0 +1,1116 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Unity.Cloud.UserReporting.Client</name>
+    </assembly>
+    <members>
+        <member name="T:Unity.Cloud.UserReporting.AttachmentExtensions">
+            <summary>
+            Provides extensions for working with attachments.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.AttachmentExtensions.AddJson(System.Collections.Generic.List{Unity.Cloud.UserReporting.UserReportAttachment},System.String,System.String,System.String)">
+            <summary>
+            Adds a JSON attachment.
+            </summary>
+            <param name="instance">The extended instance.</param>
+            <param name="name">The name of the attachment.</param>
+            <param name="fileName">The file name.</param>
+            <param name="contents">The contents.</param>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.AttachmentExtensions.AddText(System.Collections.Generic.List{Unity.Cloud.UserReporting.UserReportAttachment},System.String,System.String,System.String)">
+            <summary>
+            Adds a text attachment.
+            </summary>
+            <param name="instance">The extended instance.</param>
+            <param name="name">The name of the attachment.</param>
+            <param name="fileName">The file name.</param>
+            <param name="contents">The contents.</param>
+        </member>
+        <member name="T:Unity.Cloud.UserReporting.UserReport">
+            <summary>
+            Represents a bug report.
+            </summary>
+        </member>
+        <member name="T:Unity.Cloud.UserReporting.UserReport.UserReportMetricSorter">
+            <summary>
+            Provides sorting for metrics.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.UserReport.UserReportMetricSorter.Compare(Unity.Cloud.UserReporting.UserReportMetric,Unity.Cloud.UserReporting.UserReportMetric)">
+            <inheritdoc />
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.UserReport.#ctor">
+            <summary>
+            Creates a new instance of the <see cref="T:Unity.Cloud.UserReporting.UserReport"/> class.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReport.Attachments">
+            <summary>
+            Gets or sets the attachments.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReport.ClientMetrics">
+            <summary>
+            Gets or sets the client metrics.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReport.DeviceMetadata">
+            <summary>
+            Gets or sets the device metadata.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReport.Events">
+            <summary>
+            Gets or sets the events.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReport.Fields">
+            <summary>
+            Gets or sets the fields.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReport.Measures">
+            <summary>
+            Gets or sets the measures.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReport.Screenshots">
+            <summary>
+            Gets or sets the screenshots.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.UserReport.Clone">
+            <summary>
+            Clones the bug report.
+            </summary>
+            <returns>The cloned bug report.</returns>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.UserReport.Complete">
+            <summary>
+            Completes the bug report. This is called by the client and only needs to be called when constructing a bug report manually.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.UserReport.Fix">
+            <summary>
+            Fixes the bug report by replace null lists with empty lists.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.UserReport.GetDimensionsString">
+            <summary>
+            Gets the dimension string for the dimensions associated with this bug report.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.UserReport.ToPreview">
+            <summary>
+            Casts the bug report to a bug report preview.
+            </summary>
+            <returns>The bug report preview.</returns>
+        </member>
+        <member name="T:Unity.Cloud.UserReporting.UserReportAppearanceHint">
+            <summary>
+            Represents a bug report appearance hint.
+            </summary>
+        </member>
+        <member name="F:Unity.Cloud.UserReporting.UserReportAppearanceHint.Normal">
+            <summary>
+            Display normally.
+            </summary>
+        </member>
+        <member name="F:Unity.Cloud.UserReporting.UserReportAppearanceHint.Landscape">
+            <summary>
+            Display landscape.
+            </summary>
+        </member>
+        <member name="F:Unity.Cloud.UserReporting.UserReportAppearanceHint.Portrait">
+            <summary>
+            Display portrait.
+            </summary>
+        </member>
+        <member name="F:Unity.Cloud.UserReporting.UserReportAppearanceHint.Large">
+            <summary>
+            Display large.
+            </summary>
+        </member>
+        <member name="T:Unity.Cloud.UserReporting.UserReportAttachment">
+            <summary>
+            Represents a bug report attachment.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.UserReportAttachment.#ctor(System.String,System.String,System.String,System.Byte[])">
+            <summary>
+            Creates a new instance of the <see cref="T:Unity.Cloud.UserReporting.UserReportAttachment"/> struct.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="fileName">The file name.</param>
+            <param name="contentType">The content type.</param>
+            <param name="data">The data.</param>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportAttachment.ContentType">
+            <summary>
+            Get or sets the content type.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportAttachment.DataBase64">
+            <summary>
+            Gets or sets the data (base 64 encoded).
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportAttachment.DataIdentifier">
+            <summary>
+            Gets or sets the data identifier. This property will be overwritten by the server if provided.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportAttachment.FileName">
+            <summary>
+            Gets or sets the file name.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportAttachment.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="T:Unity.Cloud.UserReporting.UserReportEvent">
+            <summary>
+            Represents a bug report event.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportEvent.Exception">
+            <summary>
+            Gets or sets the exception.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportEvent.FrameNumber">
+            <summary>
+            Gets or sets the frame number.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportEvent.FullMessage">
+            <summary>
+            Gets or sets the full message.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportEvent.Level">
+            <summary>
+            Gets or sets the level.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportEvent.Message">
+            <summary>
+            Gets or sets the message.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportEvent.StackTrace">
+            <summary>
+            Gets or sets the stack trace.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportEvent.Timestamp">
+            <summary>
+            Gets or sets the timestamp.
+            </summary>
+        </member>
+        <member name="T:Unity.Cloud.UserReporting.UserReportEventLevel">
+            <summary>
+            Represents a bug report event level.
+            </summary>
+        </member>
+        <member name="F:Unity.Cloud.UserReporting.UserReportEventLevel.Info">
+            <summary>
+            Info.
+            </summary>
+        </member>
+        <member name="F:Unity.Cloud.UserReporting.UserReportEventLevel.Success">
+            <summary>
+            Success.
+            </summary>
+        </member>
+        <member name="F:Unity.Cloud.UserReporting.UserReportEventLevel.Warning">
+            <summary>
+            Warning.
+            </summary>
+        </member>
+        <member name="F:Unity.Cloud.UserReporting.UserReportEventLevel.Error">
+            <summary>
+            Error.
+            </summary>
+        </member>
+        <member name="T:Unity.Cloud.UserReporting.UserReportList">
+            <summary>
+            Represents a bug report list.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.UserReportList.#ctor">
+            <summary>
+            Creates a new instance of the <see cref="T:Unity.Cloud.UserReporting.UserReportList"/> class.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportList.UserReportPreviews">
+            <summary>
+            Gets or sets the bug report previews.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportList.ContinuationToken">
+            <summary>
+            Gets or sets the continuation token.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportList.Error">
+            <summary>
+            Gets or sets the error.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportList.HasMore">
+            <summary>
+            Gets or sets a value indicating whether the list has more items.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.UserReportList.Complete(System.Int32)">
+            <summary>
+            Completes the list. This only need to be called by the creator of the list.
+            </summary>
+            <param name="originalLimit">The original limit.</param>
+        </member>
+        <member name="T:Unity.Cloud.UserReporting.UserReportMeasure">
+            <summary>
+            Represents a bug report measure.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportMeasure.EndFrameNumber">
+            <summary>
+            Gets or sets the end frame number.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportMeasure.Metadata">
+            <summary>
+            Gets or sets the metadata.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportMeasure.Metrics">
+            <summary>
+            Gets or sets the metrics.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportMeasure.StartFrameNumber">
+            <summary>
+            Gets or sets the start frame number.
+            </summary>
+        </member>
+        <member name="T:Unity.Cloud.UserReporting.UserReportMetric">
+            <summary>
+            Represents a bug report metrics.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportMetric.Average">
+            <summary>
+            Gets the average.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportMetric.Count">
+            <summary>
+            Gets the count.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportMetric.Maximum">
+            <summary>
+            Gets the maximum.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportMetric.Minimum">
+            <summary>
+            Gets the minimum.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportMetric.Name">
+            <summary>
+            Gets the name.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportMetric.Sum">
+            <summary>
+            Gets the sum.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.UserReportMetric.Sample(System.Double)">
+            <summary>
+            Samples a value.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="T:Unity.Cloud.UserReporting.UserReportNamedValue">
+            <summary>
+            Represents a bug report named value.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.UserReportNamedValue.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new instance of the <see cref="T:Unity.Cloud.UserReporting.UserReportNamedValue"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportNamedValue.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportNamedValue.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+        </member>
+        <member name="T:Unity.Cloud.UserReporting.UserReportPreview">
+            <summary>
+            Represents a bug report preview or the fly weight version of a bug report.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.UserReportPreview.#ctor">
+            <summary>
+            Creates a new instance of the <see cref="T:Unity.Cloud.UserReporting.UserReportPreview"/> class.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportPreview.AggregateMetrics">
+            <summary>
+            Gets or sets the aggregate metrics.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportPreview.AppearanceHint">
+            <summary>
+            Gets or sets the appearance hint.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportPreview.ContentLength">
+            <summary>
+            Gets or sets the content length. This property will be overwritten by the server if provided.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportPreview.Dimensions">
+            <summary>
+            Gets or sets the dimensions.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportPreview.ExpiresOn">
+            <summary>
+            Gets or sets the time at which the bug report expires. This property will be overwritten by the server if provided.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportPreview.GeoCountry">
+            <summary>
+            Gets or sets the geo country.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportPreview.Identifier">
+            <summary>
+            Gets or sets the identifier. This property will be overwritten by the server if provided.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportPreview.IPAddress">
+            <summary>
+            Gets or sets the IP address. This property will be overwritten by the server if provided.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportPreview.IsHiddenWithoutDimension">
+            <summary>
+            Gets or sets a value indicating whether the bug report is hidden in the UI if a dimension filter is not specified. This is recommended for automated or high volume reports.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportPreview.IsTemporary">
+            <summary>
+            Gets or sets a value indicating whether the bug report is temporary. Temporary bug reports are short lived and not queryable.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportPreview.LicenseLevel">
+            <summary>
+            Gets or sets the license level. This property will be overwritten by the server if provided.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportPreview.ProjectIdentifier">
+            <summary>
+            Gets or sets the project identifier.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportPreview.ReceivedOn">
+            <summary>
+            Gets or sets the time at which the bug report was received. This property will be overwritten by the server if provided.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportPreview.Summary">
+            <summary>
+            Gets or sets the summary.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportPreview.Thumbnail">
+            <summary>
+            Gets or sets the thumbnail. This screenshot will be resized by the server if too large. Keep the last screenshot small in order to reduce report size and increase submission speed.
+            </summary>
+        </member>
+        <member name="T:Unity.Cloud.UserReporting.UserReportScreenshot">
+            <summary>
+            Represents a bug report screenshot.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportScreenshot.DataBase64">
+            <summary>
+            Gets or sets the data (base 64 encoded). Screenshots must be in PNG format.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportScreenshot.DataIdentifier">
+            <summary>
+            Gets or sets the data identifier. This property will be overwritten by the server if provided.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportScreenshot.FrameNumber">
+            <summary>
+            Gets or sets the frame number.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportScreenshot.Height">
+            <summary>
+            Gets the height.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.UserReportScreenshot.Width">
+            <summary>
+            Gets the width.
+            </summary>
+        </member>
+        <member name="T:Unity.Cloud.UserReporting.PngHelper">
+            <summary>
+            Provides static methods for helping with PNG images.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.PngHelper.GetPngHeightFromBase64Data(System.String)">
+            <summary>
+            Gets a PNG image's height from base 64 encoded data.
+            </summary>
+            <param name="data">The data.</param>
+            <returns>The height.</returns>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.PngHelper.GetPngWidthFromBase64Data(System.String)">
+            <summary>
+            Gets a PNG image's width from base 64 encoded data.
+            </summary>
+            <param name="data">The data.</param>
+            <returns>The width.</returns>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.PngHelper.Slice(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Slices a byte array.
+            </summary>
+            <param name="source">The source.</param>
+            <param name="start">The start.</param>
+            <param name="end">The end.</param>
+            <returns>The slices byte array.</returns>
+        </member>
+        <member name="T:Unity.Cloud.UserReporting.Client.UserReportingClient">
+            <summary>
+            Represents a bug reporting client.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.UserReportingClient.#ctor(System.String,System.String,Unity.Cloud.UserReporting.Client.IUserReportingPlatform,Unity.Cloud.UserReporting.Client.UserReportingClientConfiguration)">
+            <summary>
+            Creates a new instance of the <see cref="T:Unity.Cloud.UserReporting.Client.UserReportingClient"/> class.
+            </summary>
+            <param name="endpoint">The endpoint.</param>
+            <param name="projectIdentifier">The project identifier.</param>
+            <param name="platform">The platform.</param>
+            <param name="configuration">The configuration.</param>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.Client.UserReportingClient.Configuration">
+            <summary>
+            Gets the configuration.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.Client.UserReportingClient.Endpoint">
+            <summary>
+            Gets the endpoint.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.Client.UserReportingClient.IsConnectedToLogger">
+            <summary>
+            Gets or sets a value indicating whether the client is connected to the logger. If true, log messages will be included in bug reports.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.Client.UserReportingClient.IsSelfReporting">
+            <summary>
+            Gets or sets a value indicating whether the client is self reporting. If true, event and metrics about the client will be included in bug reports.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.Client.UserReportingClient.Platform">
+            <summary>
+            Gets the platform.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.Client.UserReportingClient.ProjectIdentifier">
+            <summary>
+            Gets the project identifier.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.Client.UserReportingClient.SendEventsToAnalytics">
+            <summary>
+            Gets or sets a value indicating whether bug reporting events should be sent to analytics.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.UserReportingClient.AddDeviceMetadata(System.String,System.String)">
+            <summary>
+            Adds device metadata.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.UserReportingClient.AddMeasureMetadata(System.String,System.String)">
+            <summary>
+            Adds measure metadata. Measure metadata is associated with a period of time.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.UserReportingClient.CreateUserReport(System.Action{Unity.Cloud.UserReporting.UserReport})">
+            <summary>
+            Creates a bug report.
+            </summary>
+            <param name="callback">The callback. Provides the bug report that was created.</param>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.UserReportingClient.GetEndpoint">
+            <summary>
+            Gets the endpoint.
+            </summary>
+            <returns>The endpoint.</returns>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.UserReportingClient.LogEvent(Unity.Cloud.UserReporting.UserReportEventLevel,System.String)">
+            <summary>
+            Logs an event.
+            </summary>
+            <param name="level">The level.</param>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.UserReportingClient.LogEvent(Unity.Cloud.UserReporting.UserReportEventLevel,System.String,System.String,System.Exception)">
+            <summary>
+            Logs an event with a stack trace and exception.
+            </summary>
+            <param name="level">The level.</param>
+            <param name="message">The message.</param>
+            <param name="stackTrace">The stack trace.</param>
+            <param name="exception">The exception.</param>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.UserReportingClient.LogException(System.Exception)">
+            <summary>
+            Logs an exception.
+            </summary>
+            <param name="exception">The exception.</param>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.UserReportingClient.SampleClientMetric(System.String,System.Double)">
+            <summary>
+            Samples a client metric. These metrics are only sample when self reporting is enabled.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.UserReportingClient.SampleMetric(System.String,System.Double)">
+            <summary>
+            Samples a metric. Metrics can be sampled frequently and have low overhead.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.UserReportingClient.SaveUserReportToDisk(Unity.Cloud.UserReporting.UserReport)">
+            <summary>
+            Saves a bug report to disk.
+            </summary>
+            <param name="userReport">The bug report.</param>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.UserReportingClient.SendUserReport(Unity.Cloud.UserReporting.UserReport,System.Action{System.Boolean,Unity.Cloud.UserReporting.UserReport})">
+            <summary>
+            Sends a bug report to the server.
+            </summary>
+            <param name="userReport">The bug report.</param>
+            <param name="callback">The callback. Provides a value indicating whether sending the bug report was successful and provides the bug report after it is modified by the server.</param>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.UserReportingClient.SendUserReport(Unity.Cloud.UserReporting.UserReport,System.Action{System.Single,System.Single},System.Action{System.Boolean,Unity.Cloud.UserReporting.UserReport})">
+            <summary>
+            Sends a bug report to the server.
+            </summary>
+            <param name="userReport">The bug report.</param>
+            <param name="progressCallback">The progress callback. Provides the upload and download progress.</param>
+            <param name="callback">The callback. Provides a value indicating whether sending the bug report was successful and provides the bug report after it is modified by the server.</param>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.UserReportingClient.TakeScreenshot(System.Int32,System.Int32,System.Action{Unity.Cloud.UserReporting.UserReportScreenshot})">
+            <summary>
+            Takes a screenshot.
+            </summary>
+            <param name="maximumWidth">The maximum width.</param>
+            <param name="maximumHeight">The maximum height.</param>
+            <param name="callback">The callback. Provides the screenshot.</param>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.UserReportingClient.TakeScreenshotFromSource(System.Int32,System.Int32,System.Object,System.Action{Unity.Cloud.UserReporting.UserReportScreenshot})">
+            <summary>
+            Takes a screenshot.
+            </summary>
+            <param name="maximumWidth">The maximum width.</param>
+            <param name="maximumHeight">The maximum height.</param>
+            <param name="source">The source. Passing null will capture the screen. Passing a camera will capture the camera's view. Passing a render texture will capture the render texture.</param>
+            <param name="callback">The callback. Provides the screenshot.</param>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.UserReportingClient.Update">
+            <summary>
+            Updates the bug reporting client, which updates networking communication, screenshotting, and metrics gathering.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.UserReportingClient.UpdateOnEndOfFrame">
+            <summary>
+            Updates the bug reporting client at the end of the frame, which updates networking communication, screenshotting, and metrics gathering.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.UserReportingClient.WaitForPerforation(System.Int32,System.Action)">
+            <summary>
+            Waits for perforation, a boundary between measures when no screenshots are in progress.
+            </summary>
+            <param name="currentScreenshotsTaken">The current screenshots taken.</param>
+            <param name="callback">The callback.</param>
+        </member>
+        <member name="T:Unity.Cloud.UserReporting.Client.UserReportingClientConfiguration">
+            <summary>
+            Represents configuration for the bug reporting client.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.UserReportingClientConfiguration.#ctor">
+            <summary>
+            Creates a new instance of the <see cref="T:Unity.Cloud.UserReporting.Client.UserReportingClientConfiguration"/> class.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.UserReportingClientConfiguration.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Creates a new instance of the <see cref="T:Unity.Cloud.UserReporting.Client.UserReportingClientConfiguration"/> class.
+            </summary>
+            <param name="maximumEventCount">The maximum event count. This is a rolling window.</param>
+            <param name="maximumMeasureCount">The maximum measure count. This is a rolling window.</param>
+            <param name="framesPerMeasure">The number of frames per measure. A bug report is only created on the boundary between measures. A large number of frames per measure will increase bug report creation time by this number of frames in the worst case.</param>
+            <param name="maximumScreenshotCount">The maximum screenshot count. This is a rolling window.</param>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.UserReportingClientConfiguration.#ctor(System.Int32,Unity.Cloud.UserReporting.Client.MetricsGatheringMode,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Creates a new instance of the <see cref="T:Unity.Cloud.UserReporting.Client.UserReportingClientConfiguration"/> class.
+            </summary>
+            <param name="maximumEventCount">The maximum event count. This is a rolling window.</param>
+            <param name="metricsGatheringMode">The metrics gathering mode.</param>
+            <param name="maximumMeasureCount">The maximum measure count. This is a rolling window.</param>
+            <param name="framesPerMeasure">The number of frames per measure. A bug report is only created on the boundary between measures. A large number of frames per measure will increase bug report creation time by this number of frames in the worst case.</param>
+            <param name="maximumScreenshotCount">The maximum screenshot count. This is a rolling window.</param>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.Client.UserReportingClientConfiguration.FramesPerMeasure">
+            <summary>
+            Gets or sets the frames per measure.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.Client.UserReportingClientConfiguration.MaximumEventCount">
+            <summary>
+            Gets or sets the maximum event count.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.Client.UserReportingClientConfiguration.MaximumMeasureCount">
+            <summary>
+            Gets or sets the maximum measure count.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.Client.UserReportingClientConfiguration.MaximumScreenshotCount">
+            <summary>
+            Gets or sets the maximum screenshot count.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.UserReporting.Client.UserReportingClientConfiguration.MetricsGatheringMode">
+            <summary>
+            Gets or sets the metrics gathering mode.
+            </summary>
+        </member>
+        <member name="T:Unity.Cloud.UserReporting.Client.IUserReportingPlatform">
+            <summary>
+            Represents a bug reporting platform.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.IUserReportingPlatform.DeserializeJson``1(System.String)">
+            <summary>
+            Deserialized the specified JSON.
+            </summary>
+            <typeparam name="T">The type.</typeparam>
+            <param name="json">The JSON.</param>
+            <returns>The deserialized object instance.</returns>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.IUserReportingPlatform.GetDeviceMetadata">
+            <summary>
+            Gets device metadata.
+            </summary>
+            <returns>Device metadata.</returns>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.IUserReportingPlatform.ModifyUserReport(Unity.Cloud.UserReporting.UserReport)">
+            <summary>
+            Modifies a bug report.
+            </summary>
+            <param name="userReport">The bug report.</param>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.IUserReportingPlatform.OnEndOfFrame(Unity.Cloud.UserReporting.Client.UserReportingClient)">
+            <summary>
+            Called at the end of a frame.
+            </summary>
+            <param name="client">The client.</param>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.IUserReportingPlatform.Post(System.String,System.String,System.Byte[],System.Action{System.Single,System.Single},System.Action{System.Boolean,System.Byte[]})">
+            <summary>
+            Posts to an endpoint.
+            </summary>
+            <param name="endpoint">The endpoint.</param>
+            <param name="contentType">The content type.</param>
+            <param name="content">The content.</param>
+            <param name="progressCallback">The progress callback. Provides the upload and download progress.</param>
+            <param name="callback">The callback. Provides a value indicating whether the post was successful and provides the resulting byte array.</param>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.IUserReportingPlatform.SendAnalyticsEvent(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Sends an analytics event.
+            </summary>
+            <param name="eventName">The event name.</param>
+            <param name="eventData">The event data.</param>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.IUserReportingPlatform.SerializeJson(System.Object)">
+            <summary>
+            Serializes the specified object instance.
+            </summary>
+            <param name="instance">The object instance.</param>
+            <returns>The JSON.</returns>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.IUserReportingPlatform.TakeScreenshot(System.Int32,System.Int32,System.Int32,System.Object,System.Action{System.Int32,System.Byte[]})">
+            <summary>
+            Takes a screenshot.
+            </summary>
+            <param name="frameNumber">The frame number.</param>
+            <param name="maximumWidth">The maximum width.</param>
+            <param name="maximumHeight">The maximum height.</param>
+            <param name="source">The source. Passing null will capture the screen. Passing a camera will capture the camera's view. Passing a render texture will capture the render texture.</param>
+            <param name="callback">The callback. Provides the screenshot.</param>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.IUserReportingPlatform.Update(Unity.Cloud.UserReporting.Client.UserReportingClient)">
+            <summary>
+            Called on update.
+            </summary>
+            <param name="client">The client.</param>
+        </member>
+        <member name="T:Unity.Cloud.UserReporting.Client.MetricsGatheringMode">
+            <summary>
+            Represents a metrics gathering mode.
+            </summary>
+        </member>
+        <member name="F:Unity.Cloud.UserReporting.Client.MetricsGatheringMode.Automatic">
+            <summary>
+            Automatic. Some metrics are gathered automatically.
+            </summary>
+        </member>
+        <member name="F:Unity.Cloud.UserReporting.Client.MetricsGatheringMode.Manual">
+            <summary>
+            Manual. No metrics are gathered automatically.
+            </summary>
+        </member>
+        <member name="F:Unity.Cloud.UserReporting.Client.MetricsGatheringMode.Disabled">
+            <summary>
+            Disabled. No metrics are gathered. Sampling a metric is a no-op.
+            </summary>
+        </member>
+        <member name="T:Unity.Cloud.UserReporting.Client.NullUserReportingPlatform">
+            <summary>
+            Represents a null bug reporting platform.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.NullUserReportingPlatform.DeserializeJson``1(System.String)">
+            <inheritdoc cref="T:Unity.Cloud.UserReporting.Client.IUserReportingPlatform"/>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.NullUserReportingPlatform.GetDeviceMetadata">
+            <inheritdoc cref="T:Unity.Cloud.UserReporting.Client.IUserReportingPlatform"/>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.NullUserReportingPlatform.ModifyUserReport(Unity.Cloud.UserReporting.UserReport)">
+            <inheritdoc cref="T:Unity.Cloud.UserReporting.Client.IUserReportingPlatform"/>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.NullUserReportingPlatform.OnEndOfFrame(Unity.Cloud.UserReporting.Client.UserReportingClient)">
+            <inheritdoc cref="T:Unity.Cloud.UserReporting.Client.IUserReportingPlatform"/>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.NullUserReportingPlatform.Post(System.String,System.String,System.Byte[],System.Action{System.Single,System.Single},System.Action{System.Boolean,System.Byte[]})">
+            <inheritdoc cref="T:Unity.Cloud.UserReporting.Client.IUserReportingPlatform"/>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.NullUserReportingPlatform.SendAnalyticsEvent(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <inheritdoc cref="T:Unity.Cloud.UserReporting.Client.IUserReportingPlatform"/>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.NullUserReportingPlatform.SerializeJson(System.Object)">
+            <inheritdoc cref="T:Unity.Cloud.UserReporting.Client.IUserReportingPlatform"/>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.NullUserReportingPlatform.TakeScreenshot(System.Int32,System.Int32,System.Int32,System.Object,System.Action{System.Int32,System.Byte[]})">
+            <inheritdoc cref="T:Unity.Cloud.UserReporting.Client.IUserReportingPlatform"/>
+        </member>
+        <member name="M:Unity.Cloud.UserReporting.Client.NullUserReportingPlatform.Update(Unity.Cloud.UserReporting.Client.UserReportingClient)">
+            <inheritdoc cref="T:Unity.Cloud.UserReporting.Client.IUserReportingPlatform"/>
+        </member>
+        <member name="T:Unity.Cloud.CyclicalList`1">
+            <summary>
+            Represents a cyclical list.
+            </summary>
+            <typeparam name="T">The type of the items in the list.</typeparam>
+        </member>
+        <member name="T:Unity.Cloud.CyclicalList`1.Enumerator">
+            <summary>
+            Represents an enumerator for a cyclical list.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.CyclicalList`1.Enumerator.#ctor(Unity.Cloud.CyclicalList{`0})">
+            <summary>
+            Creates a new instance of the <see cref="T:Unity.Cloud.CyclicalList`1.Enumerator"/> class.
+            </summary>
+            <param name="list">The list.</param>
+        </member>
+        <member name="P:Unity.Cloud.CyclicalList`1.Enumerator.Current">
+            <summary>
+            Gets the current item.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.CyclicalList`1.Enumerator.System#Collections#IEnumerator#Current">
+            <summary>
+            Gets the current item.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.CyclicalList`1.Enumerator.Dispose">
+            <summary>
+            Disposes of the enumerator.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.CyclicalList`1.Enumerator.MoveNext">
+            <summary>
+            Moves to the next item.
+            </summary>
+            <returns>A value indicating whether the move was successful.</returns>
+        </member>
+        <member name="M:Unity.Cloud.CyclicalList`1.Enumerator.Reset">
+            <summary>
+            Resets the enumerator.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.CyclicalList`1.#ctor(System.Int32)">
+            <summary>
+            Creates a new instance of the <see cref="T:Unity.Cloud.CyclicalList`1"/> class.
+            </summary>
+            <param name="capacity">The capacity.</param>
+        </member>
+        <member name="P:Unity.Cloud.CyclicalList`1.Capacity">
+            <summary>
+            Gets the capacity.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.CyclicalList`1.Count">
+            <summary>
+            Gets the count.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.CyclicalList`1.IsReadOnly">
+            <summary>
+            Gets a value indicating whether the cyclical list is read only.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.CyclicalList`1.Item(System.Int32)">
+            <summary>
+            Indexes into the cyclical list.
+            </summary>
+            <param name="index">The index.</param>
+            <returns>The item at the specified index.</returns>
+        </member>
+        <member name="M:Unity.Cloud.CyclicalList`1.Add(`0)">
+            <summary>
+            Adds an item to the cyclical list.
+            </summary>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:Unity.Cloud.CyclicalList`1.Clear">
+            <summary>
+            Clears the cyclical list.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.CyclicalList`1.Contains(`0)">
+            <summary>
+            Determines whether the cyclical list contains the specified item.
+            </summary>
+            <param name="item">The item.</param>
+            <returns>A value indicating whether the cyclical list contains the specified item.</returns>
+        </member>
+        <member name="M:Unity.Cloud.CyclicalList`1.CopyTo(`0[],System.Int32)">
+            <summary>
+            Copies the cyclical list to an array.
+            </summary>
+            <param name="array">The array.</param>
+            <param name="arrayIndex">The array index.</param>
+        </member>
+        <member name="M:Unity.Cloud.CyclicalList`1.GetEnumerator">
+            <summary>
+            Gets the enumerator.
+            </summary>
+            <returns>The enumerator.</returns>
+        </member>
+        <member name="M:Unity.Cloud.CyclicalList`1.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Gets the enumerator.
+            </summary>
+            <returns>The enumerator.</returns>
+        </member>
+        <member name="M:Unity.Cloud.CyclicalList`1.GetNextEviction">
+            <summary>
+            Gets the next eviction.
+            </summary>
+            <returns>The next eviction.</returns>
+        </member>
+        <member name="M:Unity.Cloud.CyclicalList`1.GetPointer(System.Int32)">
+            <summary>
+            Gets a pointer.
+            </summary>
+            <param name="index">The index.</param>
+            <returns>The pointer.</returns>
+        </member>
+        <member name="M:Unity.Cloud.CyclicalList`1.IndexOf(`0)">
+            <summary>
+            Gets the index of the specified item.
+            </summary>
+            <param name="item">The item.</param>
+            <returns>The index of the specified item.</returns>
+        </member>
+        <member name="M:Unity.Cloud.CyclicalList`1.Insert(System.Int32,`0)">
+            <summary>
+            Inserts an item into the cyclical list. This is a no-op on a cyclical list.
+            </summary>
+            <param name="index">The index.</param>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:Unity.Cloud.CyclicalList`1.Remove(`0)">
+            <summary>
+            Removes an item from the cyclical list. 
+            </summary>
+            <param name="item">The item.</param>
+            <returns>A value indicating whether the removal was successful. This is a no-op on a cyclical list.</returns>
+        </member>
+        <member name="M:Unity.Cloud.CyclicalList`1.RemoveAt(System.Int32)">
+            <summary>
+            Removes an item from the cyclical list at the specified index. This is a no-op on a cyclical list.
+            </summary>
+            <param name="index">The index.</param>
+        </member>
+        <member name="T:Unity.Cloud.Preconditions">
+            <summary>
+            Provides static methods for helping with preconditions.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.Preconditions.ArgumentIsLessThanOrEqualToLength(System.Object,System.Int32,System.String)">
+            <summary>
+            Ensures that an argument is less than or equal to the specified length.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="length">The length.</param>
+            <param name="argumentName">The argument name.</param>
+        </member>
+        <member name="M:Unity.Cloud.Preconditions.ArgumentNotNullOrWhitespace(System.Object,System.String)">
+            <summary>
+            Ensures that an argument is not null or whitespace.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="argumentName">The argument name.</param>
+        </member>
+        <member name="T:Unity.Cloud.SerializableException">
+            <summary>
+            Represents a serializable exception.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.SerializableException.#ctor">
+            <summary>
+            Creates a new instance of the <see cref="T:Unity.Cloud.SerializableException"/> class.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.SerializableException.#ctor(System.Exception)">
+            <summary>
+            Creates a new instance of the <see cref="T:Unity.Cloud.SerializableException"/> class.
+            </summary>
+            <param name="exception">The exception.</param>
+        </member>
+        <member name="P:Unity.Cloud.SerializableException.DetailedProblemIdentifier">
+            <summary>
+            Gets or sets the detailed problem identifier.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.SerializableException.FullText">
+            <summary>
+            Gets or sets the full text.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.SerializableException.InnerException">
+            <summary>
+            Gets or sets the inner exception.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.SerializableException.Message">
+            <summary>
+            Gets or sets the message.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.SerializableException.ProblemIdentifier">
+            <summary>
+            Gets or sets the problem identifier.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.SerializableException.StackTrace">
+            <summary>
+            Gets or sets the stack trace.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.SerializableException.Type">
+            <summary>
+            Gets or sets the type.
+            </summary>
+        </member>
+        <member name="T:Unity.Cloud.SerializableStackFrame">
+            <summary>
+            Represents a serializable stack frame.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.SerializableStackFrame.#ctor">
+            <summary>
+            Creates a new instance of the <see cref="T:Unity.Cloud.SerializableStackFrame"/> class.
+            </summary>
+        </member>
+        <member name="M:Unity.Cloud.SerializableStackFrame.#ctor(System.Diagnostics.StackFrame)">
+            <summary>
+            Creates a new instance of the <see cref="T:Unity.Cloud.SerializableStackFrame"/> class.
+            </summary>
+            <param name="stackFrame">The stack frame.</param>
+        </member>
+        <member name="P:Unity.Cloud.SerializableStackFrame.DeclaringType">
+            <summary>
+            Gets or sets the declaring type.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.SerializableStackFrame.FileColumn">
+            <summary>
+            Gets or sets the file column.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.SerializableStackFrame.FileLine">
+            <summary>
+            Gets or sets the file line.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.SerializableStackFrame.FileName">
+            <summary>
+            Gets or sets the file name.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.SerializableStackFrame.Method">
+            <summary>
+            Gets or sets the method.
+            </summary>
+        </member>
+        <member name="P:Unity.Cloud.SerializableStackFrame.MethodName">
+            <summary>
+            Gets or sets the method name.
+            </summary>
+        </member>
+    </members>
+</doc>

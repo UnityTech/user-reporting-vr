@@ -1,0 +1,4 @@
+<linker>
+    <assembly fullname="Unity.Cloud.UserReporting.Client" preserve="all"/>
+    <assembly fullname="Unity.Cloud.UserReporting.Plugin" preserve="all"/>
+</linker>
