@@ -1,2 +1,3 @@
-# user-reporting-vr
-A VR Unity project that uses the User Reporting feature of Unity Cloud Diagnostics.
+# Unity Cloud Diagnostics: User Reporting VR Sample
+
+This is a VR Unity project that uses the User Reporting feature of Unity Cloud Diagnostics.
